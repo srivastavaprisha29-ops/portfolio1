@@ -1,0 +1,507 @@
+/* ============================================
+   PRISHA PORTFOLIO - REFINED DESIGN
+   =============================================== */
+
+:root {
+    --hot-pink: #FF69B4;
+    /* Lighter pink as seen in reference */
+    --black: #000000;
+    --cream: #FFF5EE;
+    /* Creamy background */
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--black);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero-section {
+    min-height: 100vh;
+    background: var(--hot-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pink-card-frame {
+    border: 5px solid var(--black);
+    padding: 15px;
+    /* Gap between border and card */
+    background: var(--hot-pink);
+    transform: rotate(-2deg);
+    /* Slight organic tilt */
+}
+
+.pink-card {
+    background: var(--hot-pink);
+    text-align: center;
+    padding: 3rem 4rem;
+    border: 2px solid var(--black);
+    /* Inner border */
+}
+
+.hi-text {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.i-am-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.prisha-text {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* Decorative Shapes */
+.decorative-shapes {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+}
+
+.blob-shape {
+    width: 300px;
+    height: 300px;
+    background: var(--black);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    position: relative;
+}
+
+.radial-pattern {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: conic-gradient(from 0deg, var(--black) 0deg 30deg, transparent 30deg 60deg);
+    border-radius: 50%;
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ============================================
+   ME AS A PERSON
+   ============================================ */
+.person-section {
+    background: var(--hot-pink);
+    padding: 4rem 0;
+    border-bottom: 5px solid var(--black);
+}
+
+.person-title {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 3rem;
+    background: var(--black);
+    color: var(--hot-pink);
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    transform: rotate(-1deg);
+}
+
+.person-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.person-tag {
+    background: #330033;
+    /* Dark purple */
+    color: var(--hot-pink);
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    clip-path: polygon(0% 0%, 100% 0%, 95% 50%, 100% 100%, 0% 100%, 5% 50%);
+    box-shadow: 5px 5px 0px var(--black);
+}
+
+/* ============================================
+   DEVELOPER SECTION
+   ============================================ */
+.about-developer {
+    background: var(--black);
+    color: var(--hot-pink);
+    padding: 5rem 0;
+}
+
+.developer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.developer-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.lemon-quote {
+    font-style: italic;
+    color: var(--hot-pink);
+}
+
+.developer-image img {
+    width: 100%;
+    border-radius: 10px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.developer-image:hover img {
+    filter: grayscale(0%);
+}
+
+/* ============================================
+   WHAT I DO SECTION (New)
+   ============================================ */
+.what-i-do-section {
+    background: var(--cream);
+    padding: 6rem 0;
+}
+
+.oval-title-container {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.oval-title {
+    display: inline-block;
+    font-size: 2.5rem;
+    border: 2px solid var(--black);
+    border-radius: 50%;
+    /* Oval shape */
+    padding: 1.5rem 4rem;
+    background: var(--white);
+    font-weight: 400;
+}
+
+.what-i-do-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    text-align: center;
+}
+
+.do-item h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    text-decoration: underline;
+    text-align: left;
+}
+
+.do-item p {
+    font-size: 1rem;
+    text-align: left;
+    color: var(--black);
+}
+
+.do-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 1px solid var(--black);
+}
+
+.do-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+/* ============================================
+   LITERATURE / SKILLS
+   ============================================ */
+.literature-section {
+    background: var(--black);
+    padding: 5rem 0;
+    color: var(--white);
+}
+
+.literature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.lit-tag {
+    background: #4A2545;
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+}
+
+.skills-developing {
+    background: var(--hot-pink);
+    padding: 4rem 0;
+}
+
+.skills-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+.skills-list {
+    list-style: none;
+}
+
+.skills-list li {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills-list li::before {
+    content: "●";
+    margin-right: 1rem;
+}
+
+/* ============================================
+   PORTFOLIO GRID (Updated)
+   ============================================ */
+.portfolio-section {
+    background: var(--hot-pink);
+    padding: 5rem 0;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.portfolio-item {
+    position: relative;
+    background: var(--white);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%);
+}
+
+.portfolio-item:hover img {
+    filter: grayscale(0%);
+}
+
+.portfolio-label {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+.contact-section {
+    background: var(--hot-pink);
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-content {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-content h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.dashed-line {
+    border-top: 2px dashed var(--black);
+    margin: 2rem 0;
+    width: 50%;
+}
+
+.or-text {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.email-link {
+    font-size: 2rem;
+    color: #CC0066;
+    /* Darker pink for link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-radial {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background: conic-gradient(from 0deg, var(--black) 0deg 20deg, transparent 20deg 40deg);
+    opacity: 0.1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    .developer-grid,
+    .what-i-do-grid,
+    .literature-grid,
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prisha-text {
+        font-size: 3rem;
+    }
+}
+
+/* ============================================
+   PROJECTS SECTION (New)
+   ============================================ */
+.projects-section {
+    background: var(--hot-pink);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.projects-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+
+.projects-header h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--black);
+    white-space: nowrap;
+}
+
+.film-strip {
+    height: 40px;
+    background: var(--black);
+    flex-grow: 1;
+    position: relative;
+    background-image: linear-gradient(to right, transparent 50%, var(--black) 50%), linear-gradient(to right, #FF69B4 50%, transparent 50%);
+    /* Simplified film strip pattern simulation */
+    background-size: 20px 100%;
+}
+
+/* Creating a more accurate film strip look using pseudo-elements */
+.film-strip::before,
+.film-strip::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(to right, var(--white) 50%, transparent 50%);
+    background-size: 10px 100%;
+}
+
+.film-strip::before {
+    top: 2px;
+}
+
+.film-strip::after {
+    bottom: 2px;
+}
+
+
+.projects-list {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+}
+
+.projects-list li {
+    font-size: 1.8rem;
+    /* Slightly smaller than skills but distinct */
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    /* Regular weight as per image, not super bold */
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    /* Ensuring condensed look matches */
+    letter-spacing: 1px;
+}
+
+.projects-list li::before {
+    content: "●";
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
