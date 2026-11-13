@@ -4,52 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Prisha Srivastava's engineering portfolio in ML systems, networking, and cybersecurity.">
-  <meta name="theme-color" content="#eeeeeb">
+  <meta name="theme-color" content="#101010">
   <title>Prisha Srivastava | Engineering Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Geist:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=notebook">
-  <script src="motion.js?v=notebook" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=motion">
+  <script src="motion.js" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header wrap">
     <a class="mark" href="#top" aria-label="Prisha Srivastava, back to top">PS.</a>
     <nav aria-label="Main navigation">
-      <a class="home-link" href="#top">Home</a><a href="#about">About</a><a href="#work">Case studies</a><a class="contact-link" href="#contact">Contact ↗</a>
+      <a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a>
     </nav>
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="name">
+      <div class="hero-art" aria-hidden="true"></div>
       <div class="hero-content">
         <p class="label">ENGINEERING PORTFOLIO / BENGALURU</p>
-        <div class="name-frame">
-          <span class="note note-left">ML systems</span>
-          <h1 id="name" aria-label="Prisha Srivastava"><span class="typed" aria-hidden="true"><span>Prisha</span><span>Srivastava</span></span></h1>
-          <span class="note note-right">Networks &amp; security</span>
-        </div>
+        <h1 id="name" aria-label="Prisha Srivastava"><span class="typed" aria-hidden="true"><span>Prisha</span><span>Srivastava</span></span></h1>
         <p class="intro">Computer science student working on efficient ML inference, computer networks, and security.</p>
         <div class="links"><a href="#work">Explore my work <span aria-hidden="true">↓</span></a><a href="https://github.com/srivastavaprisha29-ops">GitHub <span aria-hidden="true">↗</span></a></div>
       </div>
-    </section>
-
-    <section class="about wrap" id="about" aria-labelledby="about-title">
-      <div class="about-copy">
-        <h2 id="about-title">About me</h2>
-        <p>I’m a B.Tech Computer Science student at Manipal Institute of Technology, Bengaluru. I’m interested in how we measure system performance and test behavior under real constraints. Outside engineering, I enjoy Formula 1, creative writing, literature, and debate.</p>
-      </div>
-      <figure class="field-note">
-        <p class="label">Adaptive Systems / pilot matrix</p>
-        <table>
-          <thead><tr><td></td><th scope="col">FP32</th><th scope="col">INT8</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">512D</th><td>✓</td><td>✓</td></tr>
-            <tr><th scope="row">128D</th><td>✓</td><td>✓</td></tr>
-          </tbody>
-        </table>
-        <figcaption>Feature width × storage precision</figcaption>
-      </figure>
     </section>
 
     <section id="work" aria-labelledby="work-title">
@@ -64,107 +43,100 @@
         </nav>
       </div>
     <article class="project" id="adaptive" aria-labelledby="adaptive-title">
-      <div class="project-body">
-      <header class="project-header">
+      <header class="project-header wrap">
         <p class="label">ML SYSTEMS / RESEARCH PILOT</p>
         <h3 id="adaptive-title">Adaptive Systems</h3>
         <p class="intro">Can changing the width and storage precision of an embedding reduce inference latency within an accuracy budget?</p>
-        <div class="links project-links"><a href="https://github.com/srivastavaprisha29-ops/Adaptive-Systems">Source code <span aria-hidden="true">↗</span></a><a href="https://github.com/srivastavaprisha29-ops/Adaptive-Systems/blob/main/docs/experiment-contract.md">Experiment contract <span aria-hidden="true">↗</span></a></div>
       </header>
-      <figure class="visual" data-scene="adaptive">
+      <figure class="visual wrap" data-scene="adaptive">
         <canvas aria-hidden="true"></canvas>
         <figcaption><strong>Inference pipeline</strong><span>Decoded image → ResNet-18 → 512D or PCA 128D → FP32 or INT8 storage → ridge classifier</span></figcaption>
       </figure>
-      </div>
-      <dl class="technical">
+      <dl class="technical wrap">
         <div><dt>Experimental design</dt><dd>A frozen ResNet-18 extracts CIFAR-10 features. Four configurations cross 512 or 128 features with FP32 or INT8 storage. Each configuration has its own ridge classifier, and INT8 features are reconstructed as FP32 before classification.</dd></div>
         <div><dt>Measurement</dt><dd>A single outer timer covers preprocessing through prediction on a single-threaded CPU. The harness records p50 and p95 latency and inventories tensor storage. Energy measurement is pending.</dd></div>
         <div><dt>Evaluation</dt><dd>The pilot screens configurations against a provisional 1 percentage-point accuracy margin using a paired bootstrap interval. It selects by validation p50 and locks the choice before evaluating the held-out test set.</dd></div>
       </dl>
+      <div class="links wrap"><a href="https://github.com/srivastavaprisha29-ops/Adaptive-Systems">Source code <span aria-hidden="true">↗</span></a><a href="https://github.com/srivastavaprisha29-ops/Adaptive-Systems/blob/main/docs/experiment-contract.md">Experiment contract <span aria-hidden="true">↗</span></a></div>
     </article>
 
     <article class="project" id="apex" aria-labelledby="apex-title">
-      <div class="project-body">
-      <header class="project-header">
+      <header class="project-header wrap">
         <p class="label">COMPUTER VISION / WORKING PROTOTYPE</p>
         <h3 id="apex-title">APEX</h3>
         <p class="intro">A Formula 1 car explorer with a webcam-driven exploded view and a trainable temporal gesture pipeline.</p>
-        <div class="links project-links"><a href="https://github.com/srivastavaprisha29-ops/APEX">Source code <span aria-hidden="true">↗</span></a></div>
       </header>
-      <figure class="visual" data-scene="apex">
+      <figure class="visual wrap" data-scene="apex">
         <canvas aria-hidden="true"></canvas>
         <figcaption><strong>Gesture-controlled assembly</strong><span>Webcam → MediaPipe landmarks → gesture rules → Three.js assembly</span></figcaption>
       </figure>
-      </div>
-      <dl class="technical">
+      <dl class="technical wrap">
         <div><dt>Interaction</dt><dd>Pinches move the model, two open hands scale it, and a two-pinch pull separates the assembly. Gesture changes and hand loss reset the interaction anchors.</dd></div>
         <div><dt>ML pipeline</dt><dd>The recorder exports labeled 32-frame landmark sequences. The PyTorch pipeline compares a mean-pooling MLP, a two-layer LSTM, and a temporal Transformer using participant-isolated splits.</dd></div>
         <div><dt>Current behavior</dt><dd>The viewer runs on gesture rules. The repository includes the training pipeline and FastAPI inference service. Dataset collection and trained-model validation are pending.</dd></div>
       </dl>
+      <div class="links wrap"><a href="https://github.com/srivastavaprisha29-ops/APEX">Source code <span aria-hidden="true">↗</span></a></div>
     </article>
 
     <article class="project" id="subnet" aria-labelledby="subnet-title">
-      <div class="project-body">
-      <header class="project-header">
+      <header class="project-header wrap">
         <p class="label">NETWORKS / LIVE TOOL</p>
         <h3 id="subnet-title">Subnet Studio</h3>
         <p class="intro">An interactive lab for seeing how an IPv4 prefix determines the address block and its usable hosts.</p>
-        <div class="links project-links"><a href="https://srivastavaprisha29-ops.github.io/Subnet-Studio/">Open practice lab <span aria-hidden="true">↗</span></a><a href="https://github.com/srivastavaprisha29-ops/Subnet-Studio">Source code <span aria-hidden="true">↗</span></a></div>
       </header>
-      <figure class="visual" data-scene="subnet">
+      <figure class="visual wrap" data-scene="subnet">
         <canvas aria-hidden="true"></canvas>
         <figcaption><strong>IPv4 address boundary</strong><span>192.168.1.10/24 · 24 network bits · 8 host bits</span></figcaption>
       </figure>
-      </div>
-      <dl class="technical">
+      <dl class="technical wrap">
         <div><dt>Address engine</dt><dd>Calculates masks, network and broadcast addresses, usable host ranges, and capacity for conventional /0–/30 subnets. VLSM exercises allocate the largest requirements first.</dd></div>
         <div><dt>Practice interface</dt><dd>A 32-bit explorer shows the network and host boundary. Generated questions provide immediate feedback, progressive hints, and worked solutions.</dd></div>
         <div><dt>Verification</dt><dd>The repository checks 1,000 addresses against an independent BigInt implementation and validates 600 generated question sets, including VLSM capacity and overlap.</dd></div>
       </dl>
+      <div class="links wrap"><a href="https://srivastavaprisha29-ops.github.io/Subnet-Studio/">Open practice lab <span aria-hidden="true">↗</span></a><a href="https://github.com/srivastavaprisha29-ops/Subnet-Studio">Source code <span aria-hidden="true">↗</span></a></div>
     </article>
 
     <article class="project" id="bridge" aria-labelledby="bridge-title">
-      <div class="project-body">
-      <header class="project-header">
+      <header class="project-header wrap">
         <p class="label">SOFTWARE VERIFICATION / TEST EVIDENCE</p>
         <h3 id="bridge-title">OsdagBridge Testing</h3>
         <p class="intro">A reproducible test harness for the desktop plate-girder design workflow, from input entry through structural analysis.</p>
-        <div class="links project-links"><a href="https://github.com/srivastavaprisha29-ops/OsdagBridge-Testing/blob/main/evidence/baseline/README.md">Baseline evidence <span aria-hidden="true">↗</span></a><a href="https://github.com/srivastavaprisha29-ops/OsdagBridge-Testing">Test repository <span aria-hidden="true">↗</span></a></div>
       </header>
-      <figure class="visual" data-scene="bridge">
+      <figure class="visual wrap" data-scene="bridge">
         <canvas aria-hidden="true"></canvas>
         <figcaption><strong>Plate-girder workflow</strong><span>Desktop fixture → backend handoff → OpenSees analysis → recorded results</span></figcaption>
       </figure>
-      </div>
-      <dl class="technical">
+      <dl class="technical wrap">
         <div><dt>Harness</dt><dd>A synthetic fixture populates the desktop inputs and triggers Design. The harness captures dictionaries around the backend handoff and records analysis output.</dd></div>
         <div><dt>Baseline finding</dt><dd>The completed spawn-worker run produced 50 load cases, 126 nodes, and 225 elements. The handoff reported an 8.4 m deck width while the analysis logged 8.5 m.</dd></div>
         <div><dt>Root cause and coverage</dt><dd>The analysis DTO used a 0.50 m default barrier while the layout used 0.45 m for each of two barriers. The repository also records span limits and design-variation checks.</dd></div>
       </dl>
+      <div class="links wrap"><a href="https://github.com/srivastavaprisha29-ops/OsdagBridge-Testing/blob/main/evidence/baseline/README.md">Baseline evidence <span aria-hidden="true">↗</span></a><a href="https://github.com/srivastavaprisha29-ops/OsdagBridge-Testing">Test repository <span aria-hidden="true">↗</span></a></div>
     </article>
 
     <article class="project" id="cyber" aria-labelledby="cyber-title">
-      <div class="project-body">
-      <header class="project-header">
+      <header class="project-header wrap">
         <p class="label">CYBERSECURITY / ARCHITECTURE CONCEPT</p>
         <h3 id="cyber-title">CyberTwin</h3>
         <p class="intro">A proposed identity graph for understanding how public signals can combine into an attack surface.</p>
-        <div class="links project-links"><a href="https://github.com/srivastavaprisha29-ops/CyberTwin">Architecture and roadmap <span aria-hidden="true">↗</span></a></div>
       </header>
-      <figure class="visual" data-scene="cyber">
+      <figure class="visual wrap" data-scene="cyber">
         <canvas aria-hidden="true"></canvas>
         <figcaption><strong>Proposed identity graph</strong><span>Public signals → identity correlation → exposure review</span></figcaption>
       </figure>
-      </div>
-      <dl class="technical">
+      <dl class="technical wrap">
         <div><dt>Graph model</dt><dd>The proposed graph connects identifiers such as usernames and email addresses to public profiles and exposure signals.</dd></div>
         <div><dt>Risk review</dt><dd>The concept maps links that could support impersonation or targeted phishing and calls for showing the evidence behind each risk signal.</dd></div>
         <div><dt>Development stage</dt><dd>Identity correlation, graph storage, and risk scoring are architecture proposals in the repository roadmap.</dd></div>
       </dl>
+      <div class="links wrap"><a href="https://github.com/srivastavaprisha29-ops/CyberTwin">Architecture and roadmap <span aria-hidden="true">↗</span></a></div>
     </article>
     </section>
 
-
+    <section class="about wrap" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About me</h2>
+      <p>I’m a B.Tech Computer Science student at Manipal Institute of Technology, Bengaluru. I’m interested in how we measure system performance and test behavior under real constraints. Outside engineering, I enjoy Formula 1, creative writing, literature, and debate.</p>
+    </section>
   </main>
   <footer id="contact">
     <div class="wrap contact">
