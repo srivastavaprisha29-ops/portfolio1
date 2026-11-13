@@ -1,256 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRISHA | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Dancing+Script:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prisha Srivastava's engineering portfolio. Research and projects in efficient ML inference, computer networks, and cybersecurity.">
+  <meta name="theme-color" content="#f8f6ff">
+  <title>Prisha Srivastava | Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#top">Prisha Srivastava</a>
+    <nav aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<body>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-container">
-            <div class="pink-card-frame interactive-element" data-speed="2">
-                <div class="pink-card">
-                    <p class="hi-text">HI</p>
-                    <p class="i-am-text">I am</p>
-                    <h1 class="prisha-text">PRISHA</h1>
-                </div>
-            </div>
-            <div class="decorative-shapes interactive-element" data-speed="-2">
-                <div class="blob-shape"></div>
-                <div class="radial-pattern"></div>
-                <div class="flower-shapes"></div>
-            </div>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="intro">
+      <div>
+        <p class="eyebrow">Computer Science · Bengaluru</p>
+        <h1 id="intro">Prisha<br>Srivastava<span>.</span></h1>
+        <p class="hero-description">I study how to make ML inference more efficient and build tools to explore computer networks and security.</p>
+        <div class="actions">
+          <a class="button" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="https://github.com/srivastavaprisha29-ops">GitHub <span aria-hidden="true">↗</span></a>
         </div>
+      </div>
+      <figure class="portrait">
+        <img src="images/profile.jpg.png" alt="Portrait of Prisha Srivastava" width="366" height="420" fetchpriority="high">
+        <figcaption>Manipal Institute of Technology, Bengaluru</figcaption>
+      </figure>
     </section>
 
-    <!-- ME AS A PERSON -->
-    <section class="person-section">
-        <div class="container">
-            <h2 class="person-title interactive-element" data-speed="1">ME AS A PERSON</h2>
-            <div class="person-tags">
-                <span class="person-tag interactive-element" data-speed="1.5">FUNNY</span>
-                <span class="person-tag interactive-element" data-speed="1.2">TENACIOUS</span>
-                <span class="person-tag interactive-element" data-speed="1.3">FOCUSED</span>
-                <span class="person-tag interactive-element" data-speed="1.1">OPINIONATED</span>
-                <span class="person-tag interactive-element" data-speed="1.6">TECHIE</span>
-                <span class="person-tag interactive-element" data-speed="1.4">DISCIPLINED</span>
-                <span class="person-tag interactive-element" data-speed="1.2">ADVENTUROUS</span>
-                <span class="person-tag interactive-element" data-speed="1.5">PERFECTIONIST</span>
-                <span class="person-tag interactive-element" data-speed="1.3">STRONG</span>
-                <span class="person-tag interactive-element" data-speed="1.1">LOYAL</span>
-                <span class="person-tag interactive-element" data-speed="1.4">RELENTLESS</span>
-            </div>
+    <section class="work wrap" id="work" aria-labelledby="work-title">
+      <h2 id="work-title">Selected work</h2>
+      <article class="feature" aria-labelledby="adaptive-title">
+        <div class="feature-copy">
+          <p class="eyebrow">ML systems · Research in progress</p>
+          <h3 id="adaptive-title">Adaptive Systems</h3>
+          <p class="feature-question">Can smaller feature representations make inference faster while preserving prediction quality?</p>
+          <p>I built a CPU pilot that crosses full-width and PCA-reduced features with FP32 and INT8 storage. It measures end-to-end latency and feature memory, and selects a static configuration on validation data before held-out evaluation.</p>
+          <div class="actions">
+            <a class="button" href="https://github.com/srivastavaprisha29-ops/Adaptive-Systems">Research repository <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/srivastavaprisha29-ops/Adaptive-Systems/blob/main/docs/experiment-contract.md">Experiment design <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-    </section>
-
-    <!-- Developer Section -->
-    <section class="about-developer">
-        <div class="container">
-            <div class="developer-grid">
-                <div class="developer-text">
-                    <p>I am a developer. Literally. I develop solutions to problems.This is not linked in so I wont bore
-                        you by saying I know python, java, c,html,css,JS which i do ,to some extent btw but what I will
-                        say is I solve problemss and I acquire the skills needed to solve them. I find the most simplest
-                        way to solve a complex problem. I follow the Approach of first principle thinking.Iam smart ,
-                        resourceful and a fast learner.</p>
-                    <p class="lemon-quote">You give me leamon you'll have lemon meringue , lemon pie and a delightful
-                        lemon jello.</p>
-                </div>
-                <div class="developer-image interactive-element" data-speed="3">
-                    <img src="images/profile.jpg.png" alt="Prisha">
-                    <div class="decorative-radial-small"></div>
-                </div>
-            </div>
+        <div class="experiment">
+          <table>
+            <caption>Static pilot configurations</caption>
+            <thead><tr><td></td><th scope="col">FP32</th><th scope="col">INT8</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Full width</th><td>✓</td><td>✓</td></tr>
+              <tr><th scope="row">PCA reduced</th><td>✓</td><td>✓</td></tr>
+            </tbody>
+          </table>
+          <p>INT8 applies to feature storage. The classifier runs in FP32.</p>
         </div>
+      </article>
+
+      <div class="project-grid">
+        <article class="project">
+          <p class="eyebrow">Computer vision · Prototype</p>
+          <h3>APEX</h3>
+          <p>A gesture-controlled Formula 1 car explorer. The viewer uses Three.js and MediaPipe hand landmarks. A PyTorch pipeline supports training and evaluating temporal gesture models.</p>
+          <div class="actions"><a class="text-link" href="https://github.com/srivastavaprisha29-ops/APEX">APEX repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project">
+          <p class="eyebrow">Computer networks · Live tool</p>
+          <h3>Subnet Studio</h3>
+          <p>An interactive IPv4 practice lab with a 32-bit address explorer, generated CIDR and VLSM exercises, and worked solutions that reveal the calculation step by step.</p>
+          <div class="actions">
+            <a class="text-link" href="https://srivastavaprisha29-ops.github.io/Subnet-Studio/">Open practice lab <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/srivastavaprisha29-ops/Subnet-Studio">Subnet Studio code <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="project">
+          <p class="eyebrow">Software verification · Test evidence</p>
+          <h3>OsdagBridge Testing</h3>
+          <p>Mapped the desktop design workflow and recorded reproducible baseline runs, span-boundary tests, and checks for girder, deck, support, and load variations.</p>
+          <div class="actions"><a class="text-link" href="https://github.com/srivastavaprisha29-ops/OsdagBridge-Testing">Test evidence <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project">
+          <p class="eyebrow">Cybersecurity · Concept</p>
+          <h3>CyberTwin</h3>
+          <p>A digital identity threat-modeling concept. It explores how public profiles, reused usernames, and other exposed information can combine into an attack surface.</p>
+          <div class="actions"><a class="text-link" href="https://github.com/srivastavaprisha29-ops/CyberTwin">CyberTwin concept <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
     </section>
 
-    <!-- What I Do Section (NEW) -->
-    <section class="what-i-do-section">
-        <div class="container">
-            <div class="oval-title-container">
-                <h2 class="oval-title interactive-element" data-speed="2">what i do</h2>
-            </div>
+    <section class="about wrap" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About me</h2>
+      <div>
+        <p>I’m a B.Tech Computer Science student at Manipal Institute of Technology, Bengaluru. I’m interested in dependable computing infrastructure, especially how we measure performance and test behavior under real constraints.</p>
+        <p>Outside engineering, I enjoy Formula 1, creative writing, literature, and debate.</p>
+      </div>
+    </section>
+  </main>
 
-            <div class="what-i-do-grid">
-                <!-- Creative Writing -->
-                <div class="do-item interactive-element" data-speed="1">
-                    <div class="do-image">
-                        <img src="images/gal 1.png" alt="Creative Writing">
-                    </div>
-                    <h3>Creative Writing</h3>
-                    <p>I write speeches for professionals and scripts for podcasts and storyboards. I also do creative
-                        strategy and direction for brands.</p>
-                </div>
-
-                <!-- Coding -->
-                <div class="do-item interactive-element" data-speed="1.5">
-                    <div class="do-image">
-                        <img src="images/gal 2.png" alt="Coding">
-                    </div>
-                    <h3>Coding</h3>
-                    <p>Trust me , I'll build it.</p>
-                </div>
-
-                <!-- Design -->
-                <div class="do-item interactive-element" data-speed="1.2">
-                    <div class="do-image">
-                        <img src="images/gal 3.png" alt="Design">
-                    </div>
-                    <h3>Design</h3>
-                    <p>I am creative.</p>
-                </div>
-            </div>
+  <footer id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2>Let’s talk.</h2>
+        <p>I’m interested in engineering internships and research collaborations in ML systems, networking, and security.</p>
+        <div class="actions">
+          <a class="button" href="mailto:srivastavaprisha29@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/srivastavaprisha29-ops">GitHub profile <span aria-hidden="true">↗</span></a>
         </div>
-    </section>
-
-    <!-- Literature/Interests Section -->
-    <section class="literature-section">
-        <div class="container">
-            <div class="literature-grid">
-                <div class="lit-item interactive-element" data-speed="1">
-                    <h3 class="lit-tag">F1</h3>
-                    <p>I found f1 when i was giving everything toward something. i was terrified. but watching
-                        verstappen give his soul just for the race even when the race betrayed him once in a while made
-                        me give everything to the process. even when the end result wavered.</p>
-                </div>
-                <div class="lit-item interactive-element" data-speed="1.2">
-                    <h3 class="lit-tag">GREEK<br>LITERATURE</h3>
-                    <p>Greek literature doesn't mirror the world it distorts it in a way that makes it so twisted that I
-                        get lost in the absurdities. It's my escapism.</p>
-                </div>
-                <div class="lit-item interactive-element" data-speed="1.1">
-                    <h3 class="lit-tag">CLASSIC<br>LITERATURE</h3>
-                    <p>Classic literature inspires me. It reflects how it's so simple, not easy but simple to move the
-                        world. Feeling , responsibilities , relationships we have because of the standards set. There is
-                        also some inspiration in witnessing greatness that outlive it's creato.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills-developing">
-        <div class="container">
-            <h2 class="skills-title interactive-element" data-speed="2">SKILLS I AM DEVELOPING</h2>
-            <ul class="skills-list">
-                <li class="interactive-element" data-speed="1">CLOUD COMPUTING</li>
-                <li class="interactive-element" data-speed="1.1">WEB DEV</li>
-                <li class="interactive-element" data-speed="1.2">AI</li>
-                <li class="interactive-element" data-speed="1.3">ML</li>
-                <li class="interactive-element" data-speed="1.4">CYBERSECURITY</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Projects Section (NEW) -->
-    <section class="projects-section">
-        <div class="container">
-            <div class="projects-header interactive-element" data-speed="2">
-                <div class="film-strip"></div>
-                <h2>PROJECTS I AM WORKING ON</h2>
-                <div class="film-strip"></div>
-            </div>
-            <ul class="projects-list">
-                <li class="interactive-element" data-speed="1">CYBERTWIN</li>
-                <li class="interactive-element" data-speed="1.2">WEAPON AUTOMATION</li>
-                <li class="interactive-element" data-speed="1.1">MANIPAL AUTONOMOUS ANONYMOUS CIRCUIT</li>
-                <li class="interactive-element" data-speed="1.3">PRINTING PRESS</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Immersive Graphics Section -->
-    <section id="immersive-graphics" class="immersive-section">
-        <canvas id="webgl-canvas"></canvas>
-        <canvas id="particle-canvas"></canvas>
-        <canvas id="ripple-canvas"></canvas>
-    </section>
-
-    <!-- Portfolio Gallery (UPDATED Items) -->
-    <section class="portfolio-section">
-        <div class="container">
-            <div class="portfolio-grid">
-                <!-- Debates -->
-                <div class="portfolio-item interactive-element" data-speed="1">
-                    <img src="images/gal4.png" alt="Debates">
-                    <div class="portfolio-label">Debates</div>
-                </div>
-                <!-- code -->
-                <div class="portfolio-item interactive-element" data-speed="1.2">
-                    <img src="images/gal5.png" alt="code">
-                    <div class="portfolio-label">code</div>
-                </div>
-                <!-- MUN & Debate -->
-                <div class="portfolio-item interactive-element" data-speed="1.1">
-                    <img src="images/gal6.png" alt="MUN & Debate">
-                    <div class="portfolio-label">MUN & Debate</div>
-                </div>
-                <!-- Videos -->
-                <div class="portfolio-item interactive-element" data-speed="1.3">
-                    <img src="images/gal7.png" alt="Videos">
-                    <div class="portfolio-label">Videos</div>
-                </div>
-                <!-- Research. -->
-                <div class="portfolio-item interactive-element" data-speed="1.2">
-                    <img src="images/gal8.png" alt="Research">
-                    <div class="portfolio-label">Research.</div>
-                </div>
-                <!-- academics -->
-                <div class="portfolio-item interactive-element" data-speed="1.4">
-                    <img src="images/gal9.png" alt="academics">
-                    <div class="portfolio-label">academics</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact/Collaboration Section -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-content interactive-element" data-speed="2">
-                <h2>let's collaborate<br>on your next<br>project</h2>
-                <div class="dashed-line"></div>
-                <p class="or-text">Or lets be friends<br>or enemies</p>
-                <a href="mailto:srivastavaprisha29@gmail.com" class="email-link">srivastavaprisha29@gmail.com</a>
-                <div class="contact-radial"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>PRISHA</p>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="immersive-section.js"></script>
-
-    <!-- Cursor Interaction Script -->
-    <script>
-        document.addEventListener('mousemove', (e) => {
-            const elements = document.querySelectorAll('.interactive-element');
-            const x = (e.clientX - window.innerWidth / 2) / 50;
-            const y = (e.clientY - window.innerHeight / 2) / 50;
-
-            elements.forEach(el => {
-                const speed = el.getAttribute('data-speed') || 1;
-                // Move element based on cursor position
-                el.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
-            });
-        });
-    </script>
-
+      </div>
+      <a class="text-link back-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
 </body>
-
 </html>
