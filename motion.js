@@ -152,9 +152,6 @@ function render() {
     }
     ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
     ctx.clearRect(0, 0, width, height);
-    for (let x = 18; x < width; x += 22) {
-      for (let y = 18; y < height; y += 22) node(ctx, x, y, .65, "#707070");
-    }
 
     const progress = Math.max(0, Math.min(1, (innerHeight - top) / (innerHeight * .78)));
     const t = reducedMotion.matches ? .65 : progress * progress * (3 - 2 * progress);
